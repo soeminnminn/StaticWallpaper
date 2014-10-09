@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="qav_item_padding">4dp</dimen>
+    
+	<style name="Animations" />
+
+	<!-- PopDownMenu -->
+	<style name="Animations.PopDownMenu" />
+	<style name="Animations.PopDownMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/qav_grow_from_top</item>
+		<item name="@android:windowExitAnimation">@anim/qav_shrink_from_bottom</item>
+	</style>
+	
+	<style name="Animations.PopDownMenu.Fade">
+		<item name="@android:windowEnterAnimation">@anim/qav_action_fade_in</item>
+		<item name="@android:windowExitAnimation">@anim/qav_action_fade_out</item>
+	</style>
+	
+	<!-- PopUpMenu -->
+	<style name="Animations.PopUpMenu" />
+	
+	<style name="Animations.PopUpMenu.Center">
+		<item name="@android:windowEnterAnimation">@anim/qav_grow_from_bottom</item>
+		<item name="@android:windowExitAnimation">@anim/qav_shrink_from_top</item>
+	</style>
+</resources>

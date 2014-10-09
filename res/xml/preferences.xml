@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory android:title="@string/prefs_group_general">
+        <Preference 
+            android:key="prefs_about"
+            android:summary=""
+            android:title="@string/prefs_about" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/prefs_group_actions">
+        <!-- 
+        <CheckBoxPreference  
+			android:key="prefs_action_up"  
+			android:title="@string/prefs_action_up"  
+			android:summary="@string/prefs_action_disabled_summary" 
+			android:defaultValue="false" />
+         -->
+        <CheckBoxPreference  
+			android:key="prefs_action_down"  
+			android:title="@string/prefs_action_down"  
+			android:summary="@string/prefs_action_disabled_summary" 
+			android:defaultValue="false" />
+        
+        <CheckBoxPreference  
+			android:key="prefs_action_pinch_in"  
+			android:title="@string/prefs_action_pinch_in"  
+			android:summary="@string/prefs_action_disabled_summary" 
+			android:defaultValue="false" />
+        <!--
+        <CheckBoxPreference  
+			android:key="prefs_action_dbl_tap"  
+			android:title="@string/prefs_action_dbl_tap"  
+			android:summary="@string/prefs_action_disabled_summary" 
+			android:defaultValue="false" />
+        -->
+    </PreferenceCategory>
+    
+</PreferenceScreen>

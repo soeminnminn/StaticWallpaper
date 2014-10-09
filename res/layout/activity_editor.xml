@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".EditorActivity" >
+ 
+    <com.s16.widget.cropper.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/background_default"
+        android:contentDescription="@string/empty_string"
+        android:src="@drawable/portrait" />
+<!-- 
+ 	<ImageView 
+ 	    android:id="@+id/cropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutBottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/empty_string"
+        android:src="@drawable/portrait" />
+-->
+
+	<com.s16.widget.bars.ToolbarView
+	    android:id="@+id/layoutBottom"  
+	    android:layout_width="fill_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:divider="@drawable/list_divider_holo_light"
+        android:showDividers="middle"
+        android:minHeight="@dimen/action_bar_default_height"
+        android:background="@drawable/buttonbar_background_light" />
+	
+</RelativeLayout>

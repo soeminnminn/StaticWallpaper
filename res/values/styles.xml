@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
+    </style>
+<!-- 
+    <style name="AppTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:buttonBarButtonStyle">@android:style/Widget.Holo.Button.Borderless</item>
+    </style>
+ -->
+ 	<style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:buttonBarButtonStyle">@style/LightButtonBorderless</item>
+    </style>
+    
+ 	<style name="ButtonBorderless">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:textColor">@color/bright_foreground_holo_dark</item>
+    </style>
+    
+ 	<style name="LightButtonBorderless">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingLeft">4dip</item>
+        <item name="android:paddingRight">4dip</item>
+        <item name="android:textColor">@color/bright_foreground_holo_light</item>
+    </style>
+    
+    <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@android:style/TextAppearance.Holo.Widget.ActionBar.Title</item>
+        <item name="android:background">@drawable/actionbar_background</item>
+    </style>
+
+</resources>

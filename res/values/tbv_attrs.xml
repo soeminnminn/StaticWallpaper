@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ToolbarView">
+        <attr name="tbvMoreIconColor" format="color" />
+        <attr name="tbvIconTheme">
+            <flag name="light" value="1" />
+            <flag name="dark" value="2" />
+        </attr>
+        <attr name="tbvAllowTextWithIcon" format="boolean" />
+        <attr name="tbvItemBackground" format="reference" />
+    </declare-styleable>
+
+    <style name="tbvToolbarStyle">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="tbvIconTheme">light</item>
+        <item name="tbvAllowTextWithIcon">false</item>
+        <item name="tbvItemBackground">@drawable/action_button</item>
+    </style>
+    
+</resources>

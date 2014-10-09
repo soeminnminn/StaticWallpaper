@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Static Wallpaper</string>
+    <string name="empty_string"></string>
+    
+    <string name="wallpaper_desc">Static Wallpaper with custom crop feature.</string>
+    <string name="wallpaper_author">Soe Minn Minn</string>
+    
+    <string name="title_activity_editor">Edit Image</string>
+    <string name="title_color_picker">Select Color</string>
+    <string name="title_chooser">Complete action using</string>
+    
+    <string name="color_picker_opacity">Opacity</string>
+    <string name="color_picker_sv">Saturation / Lightness</string>
+    <string name="color_picker_saturation">Saturation</string>
+    <string name="color_picker_value">Lightness</string>
+    
+    <string name="message_lock_accept_ratio">Accept ratio locked</string>
+    <string name="message_unlock_accept_ratio">Accept ratio unlocked</string>
+    <string name="message_progress_loading">Loading …</string>
+    <string name="message_progress_saving">Saving …</string>
+    
+    <string name="action_landscape">Landscape</string>
+    <string name="action_portrait">Portrait</string>
+    
+    <string name="action_pick">Pick Image …</string>
+    <string name="action_pick_image">Pick Image …</string>
+    <string name="action_edit_crop">Crop Image …</string>
+    <string name="action_draw_mode">Picture Position</string>
+    <string name="action_pick_color">Background Color …</string>
+    <string name="action_aspect_ratio">Aspect Ratio</string>
+    <string name="action_remove_image">Remove Image</string>
+    <string name="action_crop">Crop</string>
+    <string name="action_rotate">Rotate</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_accept">OK</string>
+    <string name="action_done">Done</string>
+    <string name="action_save">Save</string>
+    <string name="action_discard">Discard</string>
+    <string name="action_settings">Settings</string>
+    
+    <string-array name="rotate_angles">
+        <item>180°</item>
+        <item>90° CW</item>
+        <item>90° CCW</item>
+    </string-array>
+    
+    <string name="action_rotate_left">Rotate Left</string>
+    <string name="action_rotate_right">Rotate Right</string>
+    <string-array name="rotate_actions">
+        <item>@string/action_rotate_left</item>
+        <item>@string/action_rotate_right</item>
+    </string-array>
+    
+    <string name="action_draw_modes_fill">Fill</string>
+    <string name="action_draw_modes_fit">Fit</string>
+    <string name="action_draw_modes_stretch">Stretch</string>
+    <string name="action_draw_modes_tile">Tile</string>
+    <string name="action_draw_modes_center">Center</string>
+    <string-array name="draw_modes">
+        <item>@string/action_draw_modes_fill</item>
+        <item>@string/action_draw_modes_fit</item>
+        <item>@string/action_draw_modes_stretch</item>
+        <item>@string/action_draw_modes_tile</item>
+        <item>@string/action_draw_modes_center</item>
+    </string-array>
+    
+    <!-- Preferences -->
+    <string name="prefs_group_general">General</string>
+    <string name="prefs_general">General</string>
+    
+    <string name="prefs_group_actions">Action</string>
+    <string name="prefs_action_disabled_summary">Disabled</string>
+    <string name="prefs_action_up">Swipe Up</string>
+    <string name="prefs_action_up_summary">Swipe Up</string>
+    <string name="prefs_action_down">Swipe Down</string>
+    <string name="prefs_action_down_summary">Open notifications when swipe down.</string>
+    <string name="prefs_action_pinch_in">Pinch in</string>
+    <string name="prefs_action_pinch_in_summary">Screen off and lock when pinch in</string>
+    <string name="prefs_action_dbl_tap">Double tap</string>
+    <string name="prefs_action_dbl_tap_summary">Double tap</string>
+    
+    <string name="prefs_group_about">About</string>
+    <string name="prefs_about">About Wallpaper</string>
+    <string name="prefs_version">Version : %s</string>
+    
+    <string name="about_text"><Data>
+      <![CDATA["
+      <p><b>Static Wallpaper</b></p>
+      <p>Develop by <a href='http://www.facebook.com/soeminnminn'>Soe Minn Minn</a></p>
+      <p>Copyright \u00A9 2014 The Android Open Source Project</p>
+      "]]>
+    </Data></string>
+    
+    <string name="device_admin_activation_message">Provide a message here explaining why an application needs to become a device administrator.</string>
+    <string name="device_admin_not_enabled">Static wallpaper application was not marked as Device Administrator.\nPlease check Security settings.</string>
+    <string name="device_admin_description">Turns the screen off and locks your device.</string>
+    <string name="admin_receiver_status_enabled">Static wallpaper was added as Device Administrator</string>
+    <string name="admin_receiver_status_disabled">Static wallpaper was removed from Device Administrators list</string>
+
+</resources>

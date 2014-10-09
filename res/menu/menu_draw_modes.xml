@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_draw_modes_fill"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_position_fill"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_draw_modes_fill"/>
+    
+    <item
+        android:id="@+id/action_draw_modes_fit"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_position_fit"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_draw_modes_fit"/>
+    
+    <item
+        android:id="@+id/action_draw_modes_stretch"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_position_stretch"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_draw_modes_stretch"/>
+    
+    <item
+        android:id="@+id/action_draw_modes_tile"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_position_tile"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_draw_modes_tile"/>
+    
+    <item
+        android:id="@+id/action_draw_modes_center"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_position_center"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_draw_modes_center"/>
+    
+</menu>

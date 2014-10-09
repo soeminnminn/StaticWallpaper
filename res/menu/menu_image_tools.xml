@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_pick"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_new_picture"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_pick"/>
+    
+    <item
+        android:id="@+id/action_rotate_left"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_rotate_left"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_rotate_left"/>
+    
+    <item
+        android:id="@+id/action_rotate_right"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_rotate_right"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_rotate_right"/>
+    
+    <item
+        android:id="@+id/action_crop"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_crop"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_crop"/>
+    
+    <item
+        android:id="@+id/action_aspect_ratio"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_aspect_ratio_unlock"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_aspect_ratio"/>
+    
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_save"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_save"/>
+    
+</menu>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2" >
+    
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="0dp"
+    	android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/empty_string"
+        android:scaleType="centerInside"
+        android:src="@drawable/landscape" />
+
+    <include
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+    	android:layout_marginLeft="@dimen/activity_divider_width"
+    	android:layout_marginRight="@dimen/activity_horizontal_margin"
+    	android:layout_marginBottom="@dimen/activity_vertical_margin"
+        layout="@layout/layout_picker" />
+
+</LinearLayout>

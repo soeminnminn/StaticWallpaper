@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:isScrollContainer="true"
+    android:orientation="vertical" >
+    
+    <ScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+	    
+        <LinearLayout
+	   	    android:layout_width="match_parent"
+	   	    android:layout_height="wrap_content"
+	   	    android:orientation="vertical" >
+	   	    
+            <Button
+                android:id="@+id/actionPick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/action_item_padding"
+                android:background="@drawable/button_background"
+                android:text="@string/action_pick_image" />
+            
+            <Button
+		        android:id="@+id/actionRemoveImage"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/action_item_padding"
+		        android:background="@drawable/button_background"
+		        android:text="@string/action_remove_image" />
+		    
+		    <Button
+		        android:id="@+id/actionPickColor"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/action_item_padding"
+		        android:background="@drawable/button_background"
+		        android:text="@string/action_pick_color" />
+		    
+		    <Button
+		        android:id="@+id/actionDrawMode"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/action_item_padding"
+		        android:background="@drawable/button_background"
+		        android:text="@string/action_draw_mode" />
+	    
+        </LinearLayout>
+    </ScrollView>
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="2dp" />
+</LinearLayout>
