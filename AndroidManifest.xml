@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.s16.staticwallpaper"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0.20150525" >
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -28,22 +28,37 @@
         <activity
             android:name="com.s16.staticwallpaper.activity.MainActivity"
             android:label="@string/app_name"
+            android:excludeFromRecents="true"
             android:launchMode="singleInstance" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> --> 
             </intent-filter>
         </activity>
 
         <activity
             android:name="com.s16.staticwallpaper.activity.EditorActivity"
-            android:label="@string/title_activity_editor" >
+            android:label="@string/title_activity_editor"
+            android:excludeFromRecents="true" >
         </activity>
         
         <activity
             android:name="com.s16.staticwallpaper.activity.ScreenOffActivity"
-            android:label="@string/app_name"
+            android:label="@string/screenoff_name"
+            android:icon="@drawable/ic_shutdown"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            
+            <intent-filter> 
+			    <action android:name="android.intent.action.MAIN" /> 
+			    <action android:name="android.intent.action.SEARCH_LONG_PRESS" />
+			    <action android:name="android.intent.action.ASSIST" />
+			    <category android:name="android.intent.category.LAUNCHER" />
+			    <category android:name="android.intent.category.DEFAULT" />
+			    <category android:name="android.intent.category.DESK_DOCK" />
+			    <category android:name="android.intent.category.INFO" /> 
+			</intent-filter>
         </activity>
 
         <receiver android:name="com.s16.screenoff.ScreenOffEventReceiver" >
@@ -65,6 +80,20 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+        
+        <receiver 
+            android:name="com.s16.screenoff.ScreenOffWidgetProvider"
+            android:label="@string/screenoff_name" 
+            android:description="@string/screenoff_desc" >
+            
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            
+            <meta-data
+          		android:name="android.appwidget.provider"
+          		android:resource="@xml/widget_screenoff_1x1" />
+        </receiver>
 
         <service
             android:name="com.s16.staticwallpaper.StaticWallpaper"
@@ -78,6 +107,7 @@
                 android:name="android.service.wallpaper"
                 android:resource="@xml/wallpaper" />
         </service>
+        
     </application>
 
 </manifest>

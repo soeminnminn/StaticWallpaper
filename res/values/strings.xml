@@ -4,6 +4,9 @@
     <string name="app_name">Static Wallpaper</string>
     <string name="empty_string"></string>
     
+    <string name="screenoff_name">Screen Off</string>
+    <string name="screenoff_desc">Static Wallpaper - Screen Off.</string>
+    
     <string name="wallpaper_desc">Static Wallpaper with custom crop feature.</string>
     <string name="wallpaper_author">Soe Minn Minn</string>
     
@@ -84,6 +87,11 @@
     <string name="prefs_group_about">About</string>
     <string name="prefs_about">About Wallpaper</string>
     <string name="prefs_version">Version : %s</string>
+    
+    <string name="prefs_screenoff_vibrate">Vibrate when Screen Off</string>
+    <string name="prefs_screenoff_vibrate_summary">Do vibrate feedback when Screen Off</string>
+    <string name="prefs_screenoff_phone_state">Screen Off - Incoming Call</string>
+    <string name="prefs_screenoff_phone_state_summary">Auto screen off when incoming call.</string>
     
     <string name="about_text"><Data>
       <![CDATA["

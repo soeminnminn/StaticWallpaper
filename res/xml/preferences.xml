@@ -6,6 +6,18 @@
             android:key="prefs_about"
             android:summary=""
             android:title="@string/prefs_about" />
+        
+        <CheckBoxPreference  
+			android:key="prefs_screenoff_vibrate"  
+			android:title="@string/prefs_screenoff_vibrate"  
+			android:summary="@string/prefs_screenoff_vibrate_summary" 
+			android:defaultValue="true" />
+        
+        <CheckBoxPreference  
+			android:key="prefs_screenoff_phone_state"  
+			android:title="@string/prefs_screenoff_phone_state"  
+			android:summary="@string/prefs_screenoff_phone_state_summary" 
+			android:defaultValue="false" />
     </PreferenceCategory>
     
     <PreferenceCategory android:title="@string/prefs_group_actions">

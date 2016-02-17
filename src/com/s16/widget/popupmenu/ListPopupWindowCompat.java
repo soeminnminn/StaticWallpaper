@@ -101,7 +101,7 @@ class ListPopupWindowCompat implements ListPopupWindow {
 
     private Rect mTempRect = new Rect();
 
-    private boolean mModal;
+    private boolean mModel;
 
     @SuppressWarnings("unused")
 	private int mLayoutDirection;
@@ -257,12 +257,12 @@ class ListPopupWindowCompat implements ListPopupWindow {
      * <p>If a popup window is modal, it will receive all touch and key input. If the user touches
      * outside the popup window's content area the popup window will be dismissed.
      *
-     * @param modal {@code true} if the popup window should be modal, {@code false} otherwise.
+     * @param model {@code true} if the popup window should be modal, {@code false} otherwise.
      */
     @Override
-    public void setModal(boolean modal) {
-        mModal = true;
-        mPopup.setFocusable(modal);
+    public void setModel(boolean model) {
+        mModel = true;
+        mPopup.setFocusable(model);
     }
 
     /**
@@ -271,8 +271,8 @@ class ListPopupWindowCompat implements ListPopupWindow {
      * @return {@code true} if the popup window will be modal, {@code false} otherwise.
      */
     @Override
-    public boolean isModal() {
-        return mModal;
+    public boolean isModel() {
+        return mModel;
     }
 
     /**
@@ -625,10 +625,10 @@ class ListPopupWindowCompat implements ListPopupWindow {
                     mDropDownHorizontalOffset, mDropDownVerticalOffset);
             mDropDownList.setSelection(ListView.INVALID_POSITION);
 
-            if (!mModal || mDropDownList.isInTouchMode()) {
+            if (!mModel || mDropDownList.isInTouchMode()) {
                 clearListSelection();
             }
-            if (!mModal) {
+            if (!mModel) {
                 mHandler.post(mHideSelector);
             }
         }
@@ -839,7 +839,7 @@ class ListPopupWindowCompat implements ListPopupWindow {
      * @param keyCode keyCode param passed to the host view's onKeyDown
      * @param event   event param passed to the host view's onKeyDown
      * @return true if the event was handled, false if it was ignored.
-     * @see #setModal(boolean)
+     * @see #setModel(boolean)
      */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -937,7 +937,7 @@ class ListPopupWindowCompat implements ListPopupWindow {
      * @param keyCode keyCode param passed to the host view's onKeyUp
      * @param event   event param passed to the host view's onKeyUp
      * @return true if the event was handled, false if it was ignored.
-     * @see #setModal(boolean)
+     * @see #setModel(boolean)
      */
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
@@ -988,7 +988,7 @@ class ListPopupWindowCompat implements ListPopupWindow {
                 }
             };
 
-            mDropDownList = new DropDownListView(context, !mModal);
+            mDropDownList = new DropDownListView(context, !mModel);
             if (mDropDownListHighlight != null) {
                 mDropDownList.setSelector(mDropDownListHighlight);
             }

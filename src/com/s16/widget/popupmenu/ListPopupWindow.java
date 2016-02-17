@@ -20,9 +20,9 @@ interface ListPopupWindow {
 
     int getPromptPosition();
 
-    void setModal(boolean modal);
+    void setModel(boolean model);
 
-    boolean isModal();
+    boolean isModel();
 
     void setDropDownAlwaysVisible(boolean dropDownAlwaysVisible);
 

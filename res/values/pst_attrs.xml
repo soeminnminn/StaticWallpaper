@@ -14,5 +14,8 @@
         <attr name="pstsShouldExpand" format="boolean" />
         <attr name="pstsTextAllCaps" format="boolean" />
     </declare-styleable>
+    
+    <!-- colors.xml -->
+    <color name="background_tab_pressed">#6633B5E5</color>
 
 </resources>

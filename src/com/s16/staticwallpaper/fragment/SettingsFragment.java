@@ -15,9 +15,11 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 public class SettingsFragment extends PreferenceFragment {
 	
@@ -110,7 +112,13 @@ public class SettingsFragment extends PreferenceFragment {
 		dialogBuilder.setTitle(getText(R.string.prefs_group_about));
 		
 		String html = context.getText(R.string.about_text).toString();
-		dialogBuilder.setMessage(Html.fromHtml(html));
+		final TextView message = new TextView(context);
+		message.setPadding((int)Common.convertDpToPixel(10f, context), (int)Common.convertDpToPixel(10f, context), 
+				(int)Common.convertDpToPixel(10f, context), (int)Common.convertDpToPixel(10f, context));
+		message.setTextColor(context.getResources().getColor(android.R.color.black));
+		message.setMovementMethod(LinkMovementMethod.getInstance());
+		message.setText(Html.fromHtml(html));
+		dialogBuilder.setView(message);
 		
 		dialogBuilder.setNegativeButton(getText(android.R.string.cancel), new DialogInterface.OnClickListener() {
 			@Override

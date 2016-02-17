@@ -2,6 +2,7 @@ package com.s16.staticwallpaper.activity;
 
 import com.s16.screenoff.ScreenOffAdminReceiver;
 import com.s16.screenoff.ScreenOffUtils;
+import com.s16.staticwallpaper.Common;
 import com.s16.staticwallpaper.R;
 
 import android.app.Activity;
@@ -9,8 +10,10 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.preference.PreferenceManager;
 
 public class ScreenOffActivity extends Activity {
 	
@@ -20,7 +23,7 @@ public class ScreenOffActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_screen_off);
+		//setContentView(R.layout.activity_screen_off);
 		
 		if (requestDeviceAdmin(getApplicationContext())) {
 			turnScreenOffAndExit(getApplicationContext());
@@ -40,9 +43,16 @@ public class ScreenOffActivity extends Activity {
 		return admin;
 	}
 	
+	private boolean enabledVibrateFeedback() {
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		return prefs.getBoolean(Common.PREFS_SCREENOFF_VIBRATE, true);
+	}
+	
 	private void turnScreenOffAndExit(Context context) {
 		
-		((Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE)).vibrate(50);
+		if (enabledVibrateFeedback()) {
+			((Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE)).vibrate(50);
+		}
 		ScreenOffUtils.turnScreenOff(context);
 		
 		// schedule end of activity

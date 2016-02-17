@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     tools:context=".EditorActivity" >
- 
+  
     <com.s16.widget.cropper.CropImageView
         xmlns:custom="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cropImageView"
@@ -17,7 +17,7 @@
         android:background="@color/background_default"
         android:contentDescription="@string/empty_string"
         android:src="@drawable/portrait" />
-<!-- 
+<!--
  	<ImageView 
  	    android:id="@+id/cropImageView"
         android:layout_width="fill_parent"
@@ -31,7 +31,7 @@
 
 	<com.s16.widget.bars.ToolbarView
 	    android:id="@+id/layoutBottom"  
-	    android:layout_width="fill_parent"
+	    android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

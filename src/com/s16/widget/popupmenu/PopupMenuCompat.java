@@ -59,7 +59,7 @@ public class PopupMenuCompat implements OnDismissListener, OnItemClickListener, 
         mWindow.setWidth(mContext.getResources().getDimensionPixelSize(R.dimen.popup_window_width));
         mWindow.setAdapter(mAdapter);
         mWindow.setOnItemClickListener(this);
-        mWindow.setModal(true);
+        mWindow.setModel(true);
     }
     
     protected Context getContext() {

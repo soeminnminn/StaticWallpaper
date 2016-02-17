@@ -85,12 +85,12 @@ class ListPopupWindowNative implements ListPopupWindow {
     }
 
     @Override
-    public void setModal(boolean modal) {
+    public void setModel(boolean modal) {
         mListPopupWindow.setModal(modal);
     }
 
     @Override
-    public boolean isModal() {
+    public boolean isModel() {
         return mListPopupWindow.isModal();
     }
 

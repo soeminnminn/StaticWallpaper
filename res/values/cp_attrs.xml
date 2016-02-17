@@ -11,5 +11,11 @@
         <attr name="colorPickerSliderColor" format="color|reference" />
        	<attr name="colorPickerBorderColor" format="color|reference" />
     </declare-styleable>
+    
+    <!-- styles.xml -->
+    <style name="dialog_color_pciker_view_portrait">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
 </resources>

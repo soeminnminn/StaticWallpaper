@@ -3,7 +3,10 @@ package com.s16.staticwallpaper;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 
 public class Common {
 	
@@ -49,9 +52,40 @@ public class Common {
 	public static final String PREFS_ACTION_DOWN = "prefs_action_down";
 	public static final String PREFS_ACTION_PINCH_IN = "prefs_action_pinch_in";
 	
+	public static final String PREFS_SCREENOFF_VIBRATE = "prefs_screenoff_vibrate";
+	public static final String PREFS_SCREENOFF_PHONE_STATE = "prefs_screenoff_phone_state";
+	
 	// SharedPreference
 	public static String getCurrentDateString() {
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd-HHmmss");
 		return format.format(Calendar.getInstance().getTime());
+	}
+	
+	/**
+	 * This method converts dp unit to equivalent pixels, depending on device density. 
+	 * 
+	 * @param dp A value in dp (density independent pixels) unit. Which we need to convert into pixels
+	 * @param context Context to get resources and device specific display metrics
+	 * @return A float value to represent px equivalent to dp depending on device density
+	 */
+	public static float convertDpToPixel(float dp, Context context){
+	    Resources resources = context.getResources();
+	    DisplayMetrics metrics = resources.getDisplayMetrics();
+	    float px = dp * (metrics.densityDpi / 160f);
+	    return px;
+	}
+	
+	/**
+	 * This method converts device specific pixels to density independent pixels.
+	 * 
+	 * @param px A value in px (pixels) unit. Which we need to convert into db
+	 * @param context Context to get resources and device specific display metrics
+	 * @return A float value to represent dp equivalent to px value
+	 */
+	public static float convertPixelsToDp(float px, Context context){
+	    Resources resources = context.getResources();
+	    DisplayMetrics metrics = resources.getDisplayMetrics();
+	    float dp = px / (metrics.densityDpi / 160f);
+	    return dp;
 	}
 }
